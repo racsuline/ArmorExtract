@@ -1,6 +1,12 @@
 name: Armors Extract
 
-on: workflow_dispatch
+on: 
+    workflow_dispatch:
+        inputs:
+            download_url:
+                required: true
+env:
+    download_url: ${{ github.event.inputs.download_url }}
 jobs:
     extract:
         runs-on: ubuntu-latest

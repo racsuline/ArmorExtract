@@ -33,7 +33,7 @@ class ItemsAdder:
                     "chest": "CHESTPLATE",
                     "legs": "LEGGINGS",
                     "feet": "BOOTS"
-                }[slot]
+                }[slot.lower()]
                 material = item_data["resource"].get("material", f"LEATHER_{armor_type}")
                 custom_model_data = str(self.item_ids[material][f"{namespace}:{item_id}"])
 

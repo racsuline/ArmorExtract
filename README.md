@@ -23,3 +23,14 @@ python extract.py
 - Nexo: 🏗
 3. Go to Actions -> Extract Armors -> Run workflow -> Input Download URL -> Run
 4. Wait for the job to finish and download artifact
+
+### Correct file structure for Content.zip
+
+  <p align="center">
+    <img src="https://qu.ax/QVBcz.jpeg" width="400"><br>
+  </p>
+
+### Installation Guide
+1. Move `furnace.json` into `generated.zip` and start the conversion
+2. After conversion, move the `textures` folder into the Bedrock resource pack
+3. Complete the setup by following this guide ![Install the Pack into Geyser](http://furnacetool.xyz/docs/convert/how_to_use_bot/#step-3-install-the-pack-into-geyser)

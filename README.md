@@ -33,4 +33,4 @@ python extract.py
 ### Installation Guide
 1. Move `furnace.json` into `generated.zip` and start the conversion
 2. After conversion, move the `textures` folder into the Bedrock resource pack
-3. Complete the setup by following this guide ![Install the Pack into Geyser](http://furnacetool.xyz/docs/convert/how_to_use_bot/#step-3-install-the-pack-into-geyser)
+3. Complete the setup by following this guide [Install the Pack into Geyser](http://furnacetool.xyz/docs/convert/how_to_use_bot/#step-3-install-the-pack-into-geyser)

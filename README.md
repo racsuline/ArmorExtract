@@ -18,11 +18,19 @@ python extract.py
 
 ### Github Action
 1. Fork / Import to New Repository
-2. Upload content from ItemsAdder / Nexo / ... to download link
+  <p align="center">
+    <img src="https://qu.ax/TpVxQ.jpeg" width="400"><br>
+  </p>
+  
+3. Upload content from ItemsAdder / Nexo / ... to download link
 - ItemsAdder: zip `content` folder and `storage` folder with `items_ids_cache.yml`. Rename zip to `Content.zip`
 - Nexo: 🏗
-3. Go to Actions -> Extract Armors -> Run workflow -> Input Download URL -> Run
-4. Wait for the job to finish and download artifact
+4. Go to Actions -> Extract Armors -> Run workflow -> Input Download URL -> Run
+  <p align="center">
+    <img src="https://qu.ax/Fbavc.jpeg" width="400"><br>
+  </p>
+  
+5. Wait for the job to finish and download artifact
 
 ### Correct file structure for Content.zip
   <p align="center">

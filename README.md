@@ -25,12 +25,19 @@ python extract.py
 4. Wait for the job to finish and download artifact
 
 ### Correct file structure for Content.zip
-
   <p align="center">
     <img src="https://qu.ax/QVBcz.jpeg" width="400"><br>
   </p>
 
 ### Installation Guide
 1. Move `furnace.json` into `generated.zip` and start the conversion
+  <p align="center">
+    <img src="https://qu.ax/QCGtH.jpeg" width="400"><br>
+  </p>
+  
 2. After conversion, move the `textures` folder into the Bedrock resource pack
-3. Complete the setup by following this guide [Install the Pack into Geyser](http://furnacetool.xyz/docs/convert/how_to_use_bot/#step-3-install-the-pack-into-geyser)
+  <p align="center">
+    <img src="https://qu.ax/aQhRh.jpeg" width="400"><br>
+  </p>
+
+4. Complete the setup by following this guide [Install the Pack into Geyser](http://furnacetool.xyz/docs/convert/how_to_use_bot/#step-3-install-the-pack-into-geyser)

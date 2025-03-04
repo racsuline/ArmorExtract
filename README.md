@@ -33,6 +33,15 @@ python extract.py
 5. Wait for the job to finish and download artifact
 
 ### Correct file structure for Content.zip
+
+```
+🗃️ Content.zip  
+└── 📂 ItemsAdder  
+    ├── 📂 contents  
+    └── 📂 storage  
+        └── 📄 items_ids_cache.yml  
+```
+
   <p align="center">
     <img src="https://qu.ax/QVBcz.jpeg" width="400"><br>
   </p>

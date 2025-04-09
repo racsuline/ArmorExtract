@@ -1,8 +1,7 @@
 import os
-import json
 import glob
 import shutil
-from utils import Utils
+from utils.utils import Utils
 
 class ItemsAdder:
     def __init__(self):
@@ -21,13 +20,13 @@ class ItemsAdder:
 
             namespace = data["info"]["namespace"]
             for item_id, item_data in data["items"].items():
-                if not "specific_properties" in item_data or not "armor" in item_data["specific_properties"] or not "slot" in item_data["specific_properties"]["armor"] or not "custom_armor" in item_data["specific_properties"]["armor"]:
+                if not item_data: continue
+                armor_data = item_data.get("specific_properties", {}).get("armor", {})
+                if not armor_data.get("slot") or armor_data.get("custom_armor") not in self.armors_rendering:
                     continue
-                if item_data["specific_properties"]["armor"]["custom_armor"] not in self.armors_rendering:
-                    continue
-                slot = item_data["specific_properties"]["armor"]["slot"]
+                slot = armor_data["slot"]
                 layer = "layer_2" if slot == "legs" else "layer_1"
-                layer_rendering = self.armors_rendering[item_data["specific_properties"]["armor"]["custom_armor"]]
+                layer_rendering = self.armors_rendering[armor_data["custom_armor"]]
                 armor_type = {
                     "head": "HELMET",
                     "chest": "CHESTPLATE",
@@ -35,9 +34,17 @@ class ItemsAdder:
                     "feet": "BOOTS"
                 }[slot.lower()]
                 material = item_data["resource"].get("material", f"LEATHER_{armor_type}")
-                custom_model_data = str(self.item_ids[material][f"{namespace}:{item_id}"])
 
-                file = glob.glob(f"ItemsAdder/contents/**/textures/{layer_rendering[layer]}.png", recursive=True)[0]
+                item_key = f"{namespace}:{item_id}"
+                if item_key not in self.item_ids.get(material, {}):
+                    print(f"Not found: {item_key} {material}")
+                    continue
+
+                custom_model_data = str(self.item_ids[material][f"{namespace}:{item_id}"])
+                files = glob.glob(f"ItemsAdder/contents/**/textures/{layer_rendering[layer]}.png", recursive=True)
+                if len(files) == 0: continue
+                file = files[0]
+                
                 os.makedirs(os.path.dirname(f"output/itemsadder/textures/models/{layer_rendering[layer]}.png"), exist_ok=True)
                 shutil.copy(file, f"output/itemsadder/textures/models/{layer_rendering[layer]}.png")
 

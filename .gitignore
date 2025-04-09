@@ -1,4 +1,6 @@
+__pycache__/
 ItemsAdder/
 output/
-__pycache__/
+Nexo/
 .env
+*.zip

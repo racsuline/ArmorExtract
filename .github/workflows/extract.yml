@@ -3,10 +3,10 @@ name: Armors Extract
 on: 
     workflow_dispatch:
         inputs:
-            download_url:
+            input_content:
                 required: true
 env:
-    download_url: ${{ github.event.inputs.download_url }}
+    input_content: ${{ github.event.inputs.input_content }}
 jobs:
     extract:
         runs-on: ubuntu-latest

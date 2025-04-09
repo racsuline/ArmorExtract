@@ -1,5 +1,5 @@
 # Auto Armor Generator For Furnace
-This tool allows you automatically generate armor from itemsadder,... for furnace.
+This tool allows you automatically generate armor from itemsadder, nexo,... for furnace.
 
 ## How to use
 ### Local
@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ```
 3. Upload content from ItemsAdder / Nexo / ...
 - ItemsAdder: zip `content` folder and `storage` folder with `items_ids_cache.yml`. Rename zip to `Content.zip`
-- Nexo: 🏗
+- Nexo: zip `items` folder and `pack` folder with `pack.zip`. Rename zip to `Content.zip`
 4. Run script
 ```bash
 python extract.py
@@ -32,24 +32,34 @@ python extract.py
   
 5. Wait for the job to finish and download artifact
 
-### Correct file structure for Content.zip
+### Correct file structure for Content.zip 
 
-```
-🗃️ Content.zip  
+``` 
+🗃️ Content.zip (For ItemsAdder)
 └── 📂 ItemsAdder  
     ├── 📂 contents  
     └── 📂 storage  
         └── 📄 items_ids_cache.yml  
 ```
 
+``` 
+🗃️ Content.zip (For Nexo)
+└── 📂 Nexo  
+    ├── 📂 items  
+    └── 📂 pack  
+        └── 📦 pack.zip
+```
+
   <p align="center">
-    <img src="https://qu.ax/QVBcz.jpeg" width="400"><br>
+    <img src="https://qu.ax/QVBcz.jpeg" width="400">
+    <img src="https://qu.ax/irTsr.jpeg" width="400">
   </p>
 
 ### Installation Guide
-1. Move `furnace.json` into `generated.zip` and start the conversion
+1. Move `furnace.json` into `generated.zip (for ItemsAdder)` or `pack.zip (for Nexo)` and start the conversion
   <p align="center">
-    <img src="https://qu.ax/QCGtH.jpeg" width="400"><br>
+    <img src="https://qu.ax/QCGtH.jpeg" width="400">
+    <img src="https://qu.ax/nCUyR.jpeg" width="400">
   </p>
   
 2. After conversion, move the `textures` folder into the Bedrock resource pack

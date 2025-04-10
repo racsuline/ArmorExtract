@@ -19,5 +19,4 @@ try:
         Nexo().extract()
     print("Done")
 except Exception as e:
-    print(f"\033[91mError:\033[0m \033[90m{e}\033[0m")
-    sys.exit(1)
+    sys.exit(e)

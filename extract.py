@@ -2,8 +2,7 @@ from extracts.itemsadder import ItemsAdder
 from extracts.nexo import Nexo
 from utils.loader import Loader 
 from utils.utils import Utils
-import sys
-import os
+import sys, os
 
 if os.path.exists(".env"):
     import dotenv

@@ -2,6 +2,7 @@ from extracts.itemsadder import ItemsAdder
 from extracts.nexo import Nexo
 from utils.loader import Loader 
 from utils.utils import Utils
+import sys
 import os
 
 if os.path.exists(".env"):
@@ -19,3 +20,4 @@ try:
     print("Done")
 except Exception as e:
     print(f"Error loading: {e}")
+    sys.exit(1)

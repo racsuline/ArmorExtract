@@ -18,8 +18,7 @@ class ItemsAdder:
             namespace = data.get("info", {}).get("namespace", "")
             for equip_id, equip_data in data.get("equipments", {}).items():
                 if equip_data.get("type") == "armor" or "layer_1" in equip_data:
-                    key = f"{namespace}:{equip_id}" if namespace else equip_id
-                    self.armors_rendering[key] = {"layer_1": equip_data.get("layer_1", ""), "layer_2": equip_data.get("layer_2", "")}
+                    self.armors_rendering[f"{namespace}:{equip_id}" if namespace else equip_id] = {"layer_1": equip_data.get("layer_1", ""), "layer_2": equip_data.get("layer_2", "")}
 
         for data in datas:
             namespace = data.get("info", {}).get("namespace", "")

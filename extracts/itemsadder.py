@@ -54,7 +54,8 @@ class ItemsAdder:
             result = slot_map.get(slot.lower())
             if result: return result
         for armor in slot_map.values():
-            if armor[0] in item_data.get("resource", {}).get("material", ""): return armor
+            material = item_data.get("resource", {}).get("material") or ""
+            if armor[0] in material: return armor
         return None, None
 
     def get_texture(self, item_data, namespace, layer):
